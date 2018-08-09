@@ -19,7 +19,6 @@ public class InvoiceController {
     @Autowired
     private InvoiceService service;
 
-    @Cacheable(cacheNames = "InvoiceInfo", key = "#fpqqlsh" )
     @RequestMapping(value = "/queryInvoiceInfo", method = RequestMethod.GET)
     public @ResponseBody List<InvoiceInfo> getInvoiceInfo(@RequestParam String fpqqlsh){
         return service.getInvoiceInfo(fpqqlsh);

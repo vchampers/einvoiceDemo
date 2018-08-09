@@ -94,4 +94,19 @@ public class Invoice implements Serializable {
     public void setSpbm(String spbm) {
         this.spbm = spbm;
     }
+
+//    @Override
+//    public String toString(){
+//        return "{" +
+//                "fpqqlsh: '" + fpqqlsh + "\', " +
+//                "xsfNSRSBH: '" + xsfNSRSBH + "\', " +
+//                "xsfMC: '" + xsfMC + "\', " +
+//                "gmfMC: '" + gmfMC + "\', " +
+//                "jshj: '" + jshj + "\', " +
+//                "xmmc: '" + xmmc + "\', " +
+//                "xmjshj: '" + xmjshj + "\', " +
+//                "sl: '" + sl + "\', " +
+//                "spbm: '" + spbm + "\' " +
+//                '}';
+//    }
 }
