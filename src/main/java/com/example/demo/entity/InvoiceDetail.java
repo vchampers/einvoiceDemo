@@ -1,6 +1,8 @@
 package com.example.demo.entity;
 
-public class InvoiceDetail {
+import java.io.Serializable;
+
+public class InvoiceDetail implements Serializable {
 
     //项目名称
     private String xmmc;
@@ -20,6 +22,7 @@ public class InvoiceDetail {
         this.spbm = spbm;
         this.fpqqlsh = fpqqlsh;
     }
+    public InvoiceDetail(){}
 
     public String getXmmc() {
         return xmmc;

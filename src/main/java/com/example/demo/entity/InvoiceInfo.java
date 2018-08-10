@@ -1,8 +1,9 @@
 package com.example.demo.entity;
 
+import java.io.Serializable;
 import java.util.List;
 
-public class InvoiceInfo {
+public class InvoiceInfo implements Serializable {
 
     //发票请求流水号
     private String fpqqlsh;
@@ -13,11 +14,11 @@ public class InvoiceInfo {
     //购买方名称
     private String gmfMC;
     //价税合计
-    private String jshj;
+    private double jshj;
     //发票明细
     private List<InvoiceDetail> detailList;
 
-    public InvoiceInfo(String fpqqlsh, String xsfNSRSBH, String xsfMC, String gmfMC, String jshj,
+    public InvoiceInfo(String fpqqlsh, String xsfNSRSBH, String xsfMC, String gmfMC, double jshj,
                        List<InvoiceDetail> detail) {
         this.fpqqlsh = fpqqlsh;
         this.xsfNSRSBH = xsfNSRSBH;
@@ -26,6 +27,7 @@ public class InvoiceInfo {
         this.jshj = jshj;
         this.detailList = detail;
     }
+    public InvoiceInfo(){}
 
     public String getFpqqlsh() {
         return fpqqlsh;
@@ -59,11 +61,11 @@ public class InvoiceInfo {
         this.gmfMC = gmfMC;
     }
 
-    public String getJshj() {
+    public double getJshj() {
         return jshj;
     }
 
-    public void setJshj(String jshj) {
+    public void setJshj(double jshj) {
         this.jshj = jshj;
     }
 

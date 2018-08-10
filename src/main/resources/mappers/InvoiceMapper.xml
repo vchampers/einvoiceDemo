@@ -4,30 +4,18 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.example.demo.repository.IInvoiceDAO">
 
-    <!--<resultMap type="com.example.demo.entity.InvoiceInfo" id="InvoiceInfoMap">-->
-        <!--<result column="FPQQLSH" property="fpqqlsh"/>-->
-        <!--<result column="XSF_NSRSBH" property="xsfNSRSBH"/>-->
-        <!--<result column="XSF_MC" property="xsfMC"/>-->
-        <!--<result column="GMF_MC" property="gmfMC"/>-->
-        <!--<result column="JSHJ" property="jshj"/>-->
-        <!--<collection property="detailList" ofType="com.example.demo.entity.InvoiceDetail">-->
-            <!--<result column="XMMC" property="xmmc"/>-->
-            <!--<result column="XMJSHJ" property="xmjshj"/>-->
-            <!--<result column="SL" property="sl"/>-->
-            <!--<result column="SPBM" property="spbm"/>-->
-        <!--</collection>-->
-    <!--</resultMap>-->
-
-    <resultMap type="com.example.demo.entity.Invoice" id="InvoiceInfoMap">
+    <resultMap type="com.example.demo.entity.InvoiceInfo" id="InvoiceInfoMap">
         <result column="FPQQLSH" property="fpqqlsh"/>
         <result column="XSF_NSRSBH" property="xsfNSRSBH"/>
         <result column="XSF_MC" property="xsfMC"/>
         <result column="GMF_MC" property="gmfMC"/>
         <result column="JSHJ" property="jshj"/>
-        <result column="XMMC" property="xmmc"/>
-        <result column="XMJSHJ" property="xmjshj"/>
-        <result column="SL" property="sl"/>
-        <result column="SPBM" property="spbm"/>
+        <collection property="detailList" ofType="com.example.demo.entity.InvoiceDetail">
+            <result column="XMMC" property="xmmc"/>
+            <result column="XMJSHJ" property="xmjshj"/>
+            <result column="SL" property="sl"/>
+            <result column="SPBM" property="spbm"/>
+        </collection>
     </resultMap>
 
     <!--插入发票头-->
